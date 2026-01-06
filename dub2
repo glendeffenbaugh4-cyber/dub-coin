@@ -1,0 +1,53 @@
+DubCoin/
+├── backend/
+│   ├── index.js                  # Node.js API (mine, withdraw)
+│   ├── .env                      # Environment variables (treasury wallet, network)
+│   ├── package.json
+│   ├── signer/                   # Polygon transfer signer microservice
+│   │   └── signer.js
+│   ├── batch-withdrawals.js      # Withdrawal batching + gas optimization
+│   └── admin/                    # Admin dashboard
+│       ├── server.js
+│       └── README.md
+│
+├── android-app/
+│   ├── app/
+│   │   ├── src/
+│   │   │   ├── main/
+│   │   │   │   ├── java/com/dubcoin/   # Kotlin code
+│   │   │   │   │   ├── ApiService.kt
+│   │   │   │   │   ├── MiningViewModel.kt
+│   │   │   │   │   └── MiningScreen.kt
+│   │   │   │   └── res/               # Layouts, drawables, icons
+│   │   │   │       ├── drawable/
+│   │   │   │       │   └── ic_dubcoin.png
+│   │   │   │       ├── values/
+│   │   │   │       │   └── strings.xml
+│   │   │   │       └── layout/
+│   │   │   └── AndroidManifest.xml
+│   │   └── build.gradle
+│   └── README.md
+│
+├── contracts/
+│   ├── DubCoin.sol                 # ERC-20 contract
+│   └── EmissionController.sol      # On-chain emission controller
+│
+├── deploy/
+│   ├── deploy.js                   # ERC-20 deployment script
+│   └── README.md
+│
+├── docs/
+│   ├── architecture.md
+│   ├── security.md
+│   ├── tokenomics.md
+│   ├── emissions.md
+│   ├── legal.md
+│   └── README.md
+│
+├── scripts/
+│   ├── setup-backend.sh            # One-command backend install script
+│   ├── batch-withdrawals.sh        # Optional batch withdrawals runner
+│   └── README.md
+│
+├── README.md                       # Repo overview
+└── LICENSE                         # MIT or your chosen license
